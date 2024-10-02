@@ -5,7 +5,7 @@ import { maybeShowApiKeyBanner } from "./gemini-banner-api";
 import Webcam from "react-webcam";
 import "./FoodProductAnalysis.css";
 
-const API_KEY = "AIzaSyAPY46ZYTetXsJYZkvvVB0y_2Cgia_vo_E"; // Use API key from environment variable
+const API_KEY = "Your API Key"; // Use API key from environment variable
 
 const FoodProductAnalysis = () => {
   const [imageSrcBrand, setImageSrcBrand] = useState(null); // Holds the captured image for brand
