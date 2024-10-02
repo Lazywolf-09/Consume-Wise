@@ -1,0 +1,221 @@
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hide by default */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 1000; /* Ensure it's above the main content */
+}
+
+.sidebar.visible {
+  left: 0; /* Show sidebar */
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px; /* Slightly rounded corners for button */
+  cursor: pointer;
+  z-index: 1001; /* Ensure it's above the sidebar */
+}
+
+.sidebar-content {
+  padding: 20px;
+  text-align: center; /* Center align sidebar content */
+}
+
+.sidebar-content h2 {
+  margin-top: 0;
+  text-align: center; /* Center align sidebar headings */
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+  margin-left: 0; /* Adjust based on sidebar visibility */
+  transition: margin-left 0.3s ease; /* Smooth transition when sidebar opens/closes */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.sidebar.visible ~ main {
+  margin-left: 250px; /* Space for sidebar when visible */
+}
+
+.webcam-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Button Styles */
+.capture-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px; /* Slightly rounded corners for buttons */
+  cursor: pointer;
+  margin: 10px auto; /* Center button */
+  width: 150px; /* Default width */
+  text-align: center;
+}
+
+.capture-button.capture-nutritional {
+  width: 200px; /* Increased width for nutritional values button */
+}
+
+.analyze-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px; /* Slightly rounded corners for buttons */
+  cursor: pointer;
+  margin: 20px auto; /* Center button */
+  display: block;
+  width: 150px; /* Centered width */
+}
+
+.image-preview {
+  margin: 10px 0;
+  text-align: center; /* Center align image preview */
+}
+
+.captured-image {
+  max-width: 200px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.output {
+  margin-top: 20px;
+  text-align: justify; /* Justify text for paragraphs and other text blocks */
+}
+
+.output h1,
+.output h2,
+.output h3,
+.output h4 {
+  margin: 20px 0; /* Margin for headings */
+  text-align: justify; /* Justify headings for consistency */
+}
+
+.output p {
+  margin: 10px 0; /* Margin for paragraphs */
+  line-height: 1.6; /* Improved line height for readability */
+  text-indent: 20px; /* Indentation for the first line of paragraphs */
+  text-align: justify; /* Justify text for paragraphs */
+}
+
+.output ul,
+.output ol {
+  margin: 10px 0; /* Margin for lists */
+  padding-left: 20px; /* Indentation for lists */
+  list-style-type: none; /* Remove default list bullets */
+}
+
+.output li {
+  margin-bottom: 5px; /* Spacing between list items */
+}
+
+/* Remove list dots */
+.output ul {
+  list-style-type: none; /* Remove default bullet points */
+}
+
+.output ol {
+  list-style-type: none; /* Remove default numbers */
+}
+
+/* Table Styles */
+.output table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px; /* Space below the table */
+}
+
+.output table,
+.output th,
+.output td {
+  border: 1px solid #ddd;
+}
+
+.output th,
+.output td {
+  padding: 12px; /* Increased padding for better readability */
+  text-align: left; /* Align text to the left in table cells */
+  text-align: justify; /* Justify text within table cells */
+}
+
+.output th {
+  background-color: #3498db; /* Blue background for headings */
+  color: white; /* White text for headings */
+  font-weight: bold; /* Bold text for headings */
+}
+
+.output td {
+  background-color: #f9f9f9; /* Light gray background for table cells */
+  color: #333; /* Dark text for readability */
+}
+
+/* Import Images Button Styles */
+.import-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px; /* Slightly rounded corners for buttons */
+  cursor: pointer;
+  margin: 10px auto; /* Center button */
+  width: 150px; /* Default width */
+  text-align: center;
+}
+
+.import-button:hover {
+  background-color: #2980b9; /* Darker shade on hover */
+}
+
+/* Pin Button Styles */
+.pin-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px auto; /* Center button */
+}
+
+.file-input {
+  display: none; /* Hide the default file input */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.image-preview {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.captured-image {
+  max-width: 200px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
